@@ -8,17 +8,24 @@ Built as a high-fidelity MVP, OperatorIQ integrates modern web technologies with
 
 ---
 
-## ✨ Key Features
+## ✨ Core Capabilities & HMI Domains
 
-- **Command Center Dashboard:** A high-level overview of active machines, pending tasks, fleet status, and global safety metrics.
-- **Operator View:** A personalized, focused interface for individual operators showing current tasks, real-time shift progress, and machine telemetry.
-- **Machine Learning Intelligence Layer:**
-  - ⏱️ **Task ETA Prediction:** Estimates task completion times based on historical performance.
-  - ⚙️ **Machine Anomaly Detection:** Flags unusual telemetry (e.g., extreme temperatures or pressures).
-  - ⛽ **Fuel Anomaly Detection:** Monitors fuel burn rates against expected baselines.
-  - 🛡️ **Safety Risk Scoring:** Generates dynamic safety scores based on proximity sensors and seatbelt compliance.
-- **Grok-Powered Voice Assistant:** A floating, interactive AI assistant powered by xAI/Groq. It supports **Text-to-Speech** and **Speech-to-Text**, allowing operators to ask context-aware questions like *"What is my current task?"* or *"Am I safe right now?"* hands-free.
-- **Training & Shift Reports:** Built-in hubs for operator skill progression and comprehensive end-of-shift summaries.
+OperatorIQ features a cohesive embedded heavy-equipment HMI structured across five core domains:
+
+- **DRIVE:** Current operating awareness, active shift metrics, and machine readiness.
+- **WORK:** Task execution, dispatch queues, progress tracking, and ETA prediction.
+- **MACHINE:** Telemetry, health monitoring, and fuel intelligence (anomalies/burn rates).
+- **SAFETY:** Proximity/hazard awareness (360° sensor visualization), safety state, and active alerts.
+- **ASSIST:** Contextual AI responses, operator training, and shift debrief intelligence.
+
+### Machine Learning Intelligence Layer
+- ⏱️ **Task ETA Prediction:** Estimates task completion times based on historical performance.
+- ⚙️ **Machine Anomaly Detection:** Flags unusual telemetry (e.g., extreme temperatures or pressures).
+- ⛽ **Fuel Anomaly Detection:** Monitors fuel burn rates against expected baselines.
+- 🛡️ **Safety Risk Scoring:** Generates dynamic safety scores based on proximity sensors and seatbelt compliance.
+
+### AI Operator Assistant
+A contextual, voice-enabled AI assistant powered by Groq. It intercepts live machine context (fuel, rpm, safety, tasks) to provide factual, contextual answers to operator questions hands-free.
 
 ---
 
@@ -91,13 +98,13 @@ The frontend will be available at `http://localhost:5173` and the backend API do
 
 ## 🏗️ Project Architecture (Phases)
 
-This project was built iteratively in 6 phases:
+This project was built iteratively:
 1. **Frontend Foundation:** React UI with a bespoke industrial dark theme.
 2. **Backend & Database:** FastAPI, PostgreSQL schemas, and synthetic data generation.
 3. **Integration:** Wiring the React frontend to the FastAPI backend endpoints.
 4. **ML Intelligence MVP:** Implementing predictive models for ETAs, fuel, safety, and machine health.
-5. **Final Polish:** Routing fixes, dynamic AI Insights mapping, and UI perfection.
-6. **AI Assistant:** Grok-powered chat and voice integration for hands-free operator assistance.
+5. **AI Assistant:** Groq-powered chat and voice integration for hands-free operator assistance.
+6. **Industrial HMI Redesign:** Complete transition to a strict 5-domain in-cab HMI (Drive, Work, Machine, Safety, Assist) featuring responsive real-time safety radar, fixed viewports, and context-aware AI.
 
 ---
 
